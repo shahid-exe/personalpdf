@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: build-chatbot-for-your-data
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn server:app
+    plan: free
+    envVars:
+      - key: FLASK_ENV
+        value: production
